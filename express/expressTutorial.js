@@ -26,6 +26,3 @@ const handle = (req, res) => {
 
 //app.use(express.static('public'));
 app.get('/', handle);
-
-
-
