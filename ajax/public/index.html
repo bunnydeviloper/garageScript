@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ajax Page</title>
+  </head>
+  <body>
+    Name<input type="text" id="name" /></br>
+    Comment<input type="text" id="comment" /></br>
+    Submit<input type="submit" id="submit" />
+  </body>
+  <script>
+const button = document.getElementById('submit');
+button.onclick = () => {
+  const varName = document.getElementById('name').value;
+  const varComment= document.getElementById('comment').value;
+  const httpReq = new XMLHttpRequest();
+  httpReq.open('GET', `/submit?name=${varName}&comment=${varComment}`);
+  httpReq.send();
+}
+  </script>
+</html>
